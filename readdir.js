@@ -42,9 +42,9 @@ function _statIsDirectory (path) {
         fs.stat(path, (err, stat) => {
             if(err)
                 reject(err);
-            else {
+            else 
                 resolve(stat.isDirectory());
-            }
+            
         })
     });
 }
