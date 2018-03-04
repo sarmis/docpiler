@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 
-exports.readdirRec = readdirRec;
+module.exports = readdirRec;
 
 function readdirRec (dir) {
     return _readdir(dir)
