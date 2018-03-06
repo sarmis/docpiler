@@ -70,5 +70,9 @@ secretary.doPerFile( (file, state) => {
     fs.writeFileSync(filename, file.data.body) ;
 });
 
+secretary.do( (state) => {
+    
+})
+
 
 secretary.run();
