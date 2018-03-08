@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = (workfolder, options) => {
     return new Docpiler(workfolder, options);
+    
 }
 
 function Docpiler (workfolder, options = {}) {
@@ -18,7 +19,7 @@ function Docpiler (workfolder, options = {}) {
         if (typeof task === "function")
             this.tasks.push({func:task, options});
         else 
-            this.tasks.push({func:require('./modules/docpiler-' + task), options});
+            this.tasks.push({func:require( './modules/docpiler-' + task), options});
     }    
     
     this.build = async () => {

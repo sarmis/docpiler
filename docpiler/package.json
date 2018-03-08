@@ -1,0 +1,22 @@
+{
+    "name": "docpiler",
+    "version": "0.1.1",
+    "description": "Document manipulation pipeline / Static site generator",
+    "main": "index.js",
+    "directories": {
+        "example": "examples"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sarmis/docpiler.git"
+    },
+    "author": "thomas.sarmis@gmail.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sarmis/docpiler/issues"
+    },
+    "homepage": "https://github.com/sarmis/docpiler#readme"
+}

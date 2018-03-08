@@ -1,0 +1,10 @@
+html
+    head
+        title !{data.attributes.title}
+    body
+        div welcome
+        
+        each val in data.links
+            li  
+                a(href=val+'.html') !{val}
+        
