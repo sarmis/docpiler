@@ -1,6 +1,6 @@
 {
     "name": "docpiler",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Document manipulation pipeline / Static site generator",
     "main": "index.js",
     "directories": {
