@@ -7,12 +7,15 @@ module.exports = (file, state, opts) => {
         state.files.push(index);
     }     
 
-    var link = path.join(
+    var url = path.join(
         path.dirname(file.location.rel), 
         path.basename(file.location.rel, path.extname(file.location.rel))
     ); 
 
-    index.data.links.push( link );
+    index.data.links.push( { 
+        url: url, 
+        caption: file.data.attributes.title ? file.data.attributes.title : path.basename(url)
+    } );
     
     //file.data.body = pug.renderFile(path.resolve(state.templates, template), file)        
 };
