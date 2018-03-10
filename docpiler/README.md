@@ -12,8 +12,6 @@ The target use cases are:
 
 In contrast with most npm packages, docpiler is supposed to be installed as a global package. 
 
-Examples will be provided in the github repo.
 
-## Project Status
 
-This project is in alpha version. Please feel free to contact me directly or via github for any issues related to this package.
+

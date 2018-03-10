@@ -1,6 +1,6 @@
-const Docpiler = require('../docpiler');
+const Docpiler = require('../../docpiler');
 
-var doc = Docpiler('./static-site');
+var doc = Docpiler('.');
 
 doc.do('find', {})
 doc.do('import')

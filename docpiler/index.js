@@ -1,8 +1,7 @@
 const path = require('path');
 
 module.exports = (workfolder, options) => {
-    return new Docpiler(workfolder, options);
-    
+    return new Docpiler(workfolder, options);    
 }
 
 function Docpiler (workfolder, options = {}) {

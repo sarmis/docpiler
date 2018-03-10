@@ -18,5 +18,8 @@
     "bugs": {
         "url": "https://github.com/sarmis/docpiler/issues"
     },
-    "homepage": "https://github.com/sarmis/docpiler#readme"
+    "homepage": "https://github.com/sarmis/docpiler#readme",
+    "bin": {
+        "docpiler": "./docpiler-cli.js"
+    }
 }
