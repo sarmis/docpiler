@@ -16,7 +16,7 @@ else
         tag: 'default',
         options: { 
             src: fs.existsSync(path.resolve(workingfolder, 'src')) ? 'src' : 'source',
-            templates: 'templates',
+            theme: 'templates',
             dist: 'dist'
         },
         tasks: [
@@ -30,4 +30,6 @@ else
         ]
     };
 
-console.log('config: ' + JSON.stringify(config));
+console.log('source : ' + path.resolve(workingfolder, config.options.src));
+console.log('theme  : ' + path.resolve(workingfolder, config.options.theme));
+console.log('dist   : ' + path.resolve(workingfolder, config.options.dist));

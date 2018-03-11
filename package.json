@@ -21,5 +21,11 @@
     "homepage": "https://github.com/sarmis/docpiler#readme",
     "bin": {
         "docpiler": "./docpiler-cli.js"
+    },
+    "dependencies": {
+        "front-matter": "^2.3.0",
+        "fs-extra": "^5.0.0",
+        "markdown-it": "^8.4.1",
+        "pug": "^2.0.1"
     }
 }
