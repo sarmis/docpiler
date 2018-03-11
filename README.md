@@ -16,12 +16,21 @@ Examples will be provided in the github repo.
 
 ## Project Status
 
-This project is in alpha version. Please feel free to contact me directly or via github for any issues related to this package.
+This project is in __alpha__ version. It's quite possible that the upcomming releases __will break__ something. Please feel free to contact me directly or via github for any issues related to this package.
+
 
 ## Usage
 
-- 
-
+- In a node.js script 
+```
+    const docpiler = require('docpiler');
+    const doc = new docpiler(...);
+    ...
+```
+- As a CLI tool with a (with a `docpiler.config` file)
+```
+    />docpiler
+```
 
 ## Examples
 
