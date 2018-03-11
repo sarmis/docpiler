@@ -15,12 +15,12 @@ else
     var config = {
         tag: 'default',
         options: { 
-            src: 'src',
+            src: fs.existsSync(path.resolve(workingfolder, 'src')) ? 'src' : 'source',
             templates: 'templates',
             dist: 'dist'
         },
         tasks: [
-            {task: 'find', options: {} },
+            {task: 'find' },
             {task: 'import' },            
             {task: 'parse-frontmatter' },
             {task: 'parse-markdown' },
