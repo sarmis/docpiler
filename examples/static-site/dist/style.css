@@ -1,0 +1,115 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    background-color: #eee;
+}
+
+article {
+    text-align: justify;
+}
+
+.base-container {
+    max-width: 800px;
+    margin:  auto;
+   
+}
+
+.base-container > * {
+    padding: 8px 32px;
+    margin-bottom: 2px;
+    background-color: white;
+}
+
+/*
+.base-header {
+   
+}
+*/
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 300
+}
+
+
+h1 { /* site title */
+    font-size: 2rem;
+    font-variant: small-caps;
+    font-weight: 400;
+    text-align: center;
+}
+
+h2 { /* page title */
+    font-size: 1.6rem;
+    font-variant: small-caps;
+    font-weight: 400;
+}
+
+h3 { /* article title - should be slightly larger than text */
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: bold;  
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: bold;  
+    color: gray;   
+}
+
+h6 {
+    font-size: 0.75rem;
+    color: gray;    
+}
+
+p {
+    margin: 8px 0;
+}
+
+p + p {
+    margin: 16px 0;
+}
+
+
+.blog-article {
+    margin: 32px 0;
+}
+
+/*
+h1:
+h2: page title // bigger that text
+
+ 
+h3: article title // slighly bigger than text
+
+h4: article sub-title     // same as text but stands out
+h5: article sub-sub-title // same as text but stands out
+
+h6: smaller-than-text
+*/
+
+/*
+
+
+.base-footer {
+
+}
+*/
+

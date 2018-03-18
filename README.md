@@ -27,11 +27,35 @@ This project is in __alpha__ version. It's quite possible that the upcomming rel
     const doc = new docpiler(...);
     ...
 ```
-- As a CLI tool with a (with a `docpiler.config` file)
+- As a CLI tool (with a `docpiler.config` file)
 ```
-    />docpiler
+    /> docpiler
 ```
 
 ## Examples
 
 - [Examples](examples/README.md)
+
+## Todos
+
+- support default layout
+```
+project-root/
+    docpiler.config (optional - hence the "default" layout)
+    src/ (or source/)
+        posts/
+        pages/
+        galleries/
+    theme/ (or themes/default/)
+    dist/ 
+```
+
+- support folder-scope front-matter
+
+- Rename templates to themes
+
+
+- Support docpiler-* modules discovery in:
+  - docpiler's folder
+  - project folder (docpiler.config folder)
+  - global node_modules folder...

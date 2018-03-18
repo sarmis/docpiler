@@ -1,8 +1,8 @@
-const Docpiler = require('../../docpiler');
+const Docpiler = require('docpiler');
 
-var doc = Docpiler('.');
+var doc = Docpiler();
 
-doc.do('find', {})
+doc.do('find')
 doc.do('import')
 
 doc.do('parse-frontmatter')

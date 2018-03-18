@@ -4,11 +4,12 @@ module.exports = (workfolder, options) => {
     return new Docpiler(workfolder, options);    
 }
 
-function Docpiler (workfolder, options = {}) {
+//Todo refactor this entry point to remove workfolder...
+function Docpiler (options = {}) {
     this.state = {
-        src: path.resolve(workfolder, (options.src ? options.src : 'src')),
-        templates: path.resolve(workfolder, (options.templates ? option.templates : 'templates')),
-        dist: path.resolve(workfolder, (options.dist ? options.dist : 'dist'))        
+        src: path.resolve(options.src ? options.src : 'src'),
+        theme: path.resolve(options.theme ? options.theme : 'theme'),
+        dist: path.resolve(options.dist ? options.dist : 'dist')        
     };
 
     this.tasks = [];
@@ -34,8 +35,8 @@ function Docpiler (workfolder, options = {}) {
                 }
             }    
 
-            console.log('\n' + task.name + ' -> ' );
-            console.log(JSON.stringify(this.state, null, '  '));           
+            //console.log('\n' + task.name + ' -> ' );
+            //console.log(JSON.stringify(this.state, null, '  '));           
         };
     }    
 }
