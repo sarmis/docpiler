@@ -17,15 +17,15 @@ function Docpiler (options = {}) {
     this.do = (task, options) => {
         options = options ? options : {};
         if (typeof task === "function")
-            this.tasks.push({func:task, options});
+            this.tasks.push({func:task, options, meta:{task: null}});
         else 
-            this.tasks.push({func:require( './modules/docpiler-' + task), options});
+            this.tasks.push({func:require( './modules/docpiler-' + task), options, meta:{task}});
     }    
     
     this.build = async () => {
         for(var iTask = 0; iTask < this.tasks.length; iTask++) {
             let task = this.tasks[iTask];           
-            
+            console.log(task.meta.task)
             if (task.func.length == 2) {
                 await task.func(this.state, task.options);
             } else {
@@ -34,10 +34,8 @@ function Docpiler (options = {}) {
                     await task.func(file, this.state, task.options);
                 }
             }    
-
-            //console.log('\n' + task.name + ' -> ' );
-            //console.log(JSON.stringify(this.state, null, '  '));           
         };
+        
     }    
 }
 

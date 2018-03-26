@@ -1,6 +1,7 @@
 ---
 title: Just hack'n
-description: Nothing to see here
+category: devops
+date: "2018-01-31"
 ---
  
 This is some text about some _stuff_ that happened sometime ago

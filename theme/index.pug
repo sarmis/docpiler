@@ -1,0 +1,22 @@
+extends base.pug
+
+block content 
+    
+    section
+        header 
+           
+        - data.links.sort ( (a,b) => {return b.date.localeCompare(a.date)});
+        each link in data.links
+            article.post-preview
+                div
+                    //i.material-icons(style="font-size: 48px") subject
+                    h6.post-date !{link.date}
+                    h6.post-category !{link.category}
+
+                div
+                    header                    
+                        a(href=link.url)
+                            h3 !{link.caption}
+                    
+                    | !{link.excerpt}
+        

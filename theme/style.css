@@ -20,7 +20,7 @@ article {
 }
 
 .base-container {
-    max-width: 800px;
+    max-width: 960px;
     margin:  auto;
    
 }
@@ -41,7 +41,8 @@ article {
 h1, h2, h3, h4, h5, h6 {
     margin: 0px;
     padding: 0px;
-    font-weight: 300
+    font-weight: 300;
+    line-height: 2rem;
 }
 
 
@@ -88,8 +89,27 @@ p + p {
 }
 
 
-.blog-article {
+.post-preview {
     margin: 32px 0;
+    display: flex;    
+    border-bottom: 2px solid #ddd;
+}
+
+.post-preview > *:first-child {
+    flex: 0 0 80px;
+    margin-right: 16px;
+}
+
+
+
+.post-preview .post-category {
+    font-weight: 400;
+    font-variant: small-caps;
+
+}
+
+.post img {
+    max-width: 100%;
 }
 
 /*

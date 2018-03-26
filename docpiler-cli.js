@@ -8,23 +8,28 @@ var workingfolder = process.argv[2] ? process.argv[2] : '.';
 console.log('docpiling: ' + path.resolve(workingfolder));
 
 var configFile = path.resolve(workingfolder, 'docpiler.config');
-var config = {};
+var config = null;
 
 if (fs.existsSync(configFile)) 
-    var config = fs.readFileSync(configFile);
+    config = JSON.parse(fs.readFileSync(configFile));
 else 
-    var config = {
+    config = {
         tag: 'default',
         options: { 
             src: 
                 fs.existsSync(path.resolve(workingfolder, 'src')) ? 
                 path.resolve(workingfolder, 'src') : 
                 path.resolve(workingfolder,'source'),
-            theme: path.resolve(workingfolder,'theme'),
+
+            theme: 
+                fs.existsSync(path.resolve(workingfolder, 'theme')) ?
+                path.resolve(workingfolder, 'theme') :
+                path.resolve(__dirname, 'theme'),
+            
             dist: path.resolve(workingfolder,'dist')
         },
         tasks: [
-            {task: 'find' },
+            {task: 'init' },
             {task: 'import' },            
             {task: 'parse-frontmatter' },
             {task: 'parse-markdown' },
@@ -45,9 +50,8 @@ config.tasks.forEach( (task) => {
     doc.do(task.task, task.options);
 });    
 
-
-function build() {
-    doc.build();
+async function build() {
+    await doc.build();
     console.log('\nReady!')
 }
 

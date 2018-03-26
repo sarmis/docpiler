@@ -2,6 +2,9 @@ const fm = require('front-matter');
 const path = require('path');
 
 module.exports = (file, state, opts) => {
+    if (!file.data)
+        return ;
+        
     file.data = fm(file.data);
     
     // If <!-- more --> is found in data then select 
@@ -15,5 +18,5 @@ module.exports = (file, state, opts) => {
     file.data.attributes.title = 
         file.data.attributes.title ? 
         file.data.attributes.title : 
-        path.basename(file.location.rel);
+        path.basename(file.location.src);
 }
